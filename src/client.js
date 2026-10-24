@@ -18,6 +18,7 @@ const ROUTE = '/__dsh/always-on-top';
 
 const EN = {
   title: 'Always on top',
+  tooltip: 'Toggle always on top',
   active: 'Always on top is on. Click to turn it off.',
   inactive: 'Always on top is off. Click to keep DeepSeek Harness above other windows.',
   busy: 'Changing the window…',
@@ -31,6 +32,7 @@ const EN = {
 
 const ZH = {
   title: '窗口置顶',
+  tooltip: '切换窗口置顶',
   active: '窗口已置顶。点击取消。',
   inactive: '窗口未置顶。点击让 DeepSeek Harness 始终显示在其他窗口上方。',
   busy: '正在调整窗口…',
@@ -300,6 +302,7 @@ function PinTrigger(props) {
   } else if (state.phase === 'loading') label = translate('busy');
   else label = translate(active ? 'active' : 'inactive');
 
+  const tooltip = state.phase === 'idle' ? translate('tooltip') : label;
   const blocked = state.phase === 'unsupported' || state.phase === 'loading' || state.phase === 'busy';
 
   return h(
@@ -313,7 +316,7 @@ function PinTrigger(props) {
       'aria-label': label,
       'aria-pressed': active,
       'aria-disabled': blocked ? 'true' : 'false',
-      title: label,
+      title: tooltip,
       'data-active': active ? 'true' : 'false',
       'data-busy': state.phase === 'busy' || state.phase === 'loading' ? 'true' : 'false',
       'data-unsupported': state.phase === 'unsupported' ? 'true' : 'false',

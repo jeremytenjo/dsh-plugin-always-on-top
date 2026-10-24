@@ -12,10 +12,15 @@ above other windows. Click again to release it.
 | --- | --- |
 | ![Pin off](docs/pin-off.png) | ![Pin on](docs/pin-on.png) |
 
+Hovering shows a native title, matching the other composer actions:
+
+![Hover title](docs/pin-tooltip.png)
+
 ## Features
 
 - One 28 × 28 button in the composer, right beside source control.
 - Outline pin when off; filled white pin when on.
+- Native hover title ("Toggle always on top").
 - Reads the real `BrowserWindow.isAlwaysOnTop()` state, not a UI-only flag.
 - Survives a page reload while the window is pinned.
 - No app.asar rewrite, no re-signing, no restart after the plugin is loaded.
