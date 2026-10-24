@@ -4,9 +4,9 @@
 
 Pin the **DeepSeek Harness** desktop window above every other app, straight from the composer.
 
-A pin button sits between the source-control and backlog triggers. It is grey while the window is
-normal. Click it and the icon turns white; the Harness window now floats above other windows. Click
-again to release it.
+A pin button sits between the source-control and backlog triggers. It is a grey outline while the
+window is normal. Click it and the icon becomes a filled white pin; the Harness window now floats
+above other windows. Click again to release it.
 
 | Off | On |
 | --- | --- |
@@ -15,6 +15,7 @@ again to release it.
 ## Features
 
 - One 28 × 28 button in the composer, right beside source control.
+- Outline pin when off; filled white pin when on.
 - Reads the real `BrowserWindow.isAlwaysOnTop()` state, not a UI-only flag.
 - Survives a page reload while the window is pinned.
 - No app.asar rewrite, no re-signing, no restart after the plugin is loaded.

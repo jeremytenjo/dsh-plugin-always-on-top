@@ -118,7 +118,7 @@ function useTranslate(ctx) {
   );
 }
 
-function PinIcon() {
+function PinIcon({ active }) {
   return h(
     'svg',
     {
@@ -133,10 +133,11 @@ function PinIcon() {
       'aria-hidden': true,
       focusable: false,
     },
-    h('path', { d: 'M12 17v5' }),
     h('path', {
       d: 'M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z',
+      fill: active === true ? 'currentColor' : 'none',
     }),
+    h('path', { d: 'M12 17v5', fill: 'none' }),
   );
 }
 
@@ -317,7 +318,7 @@ function PinTrigger(props) {
       'data-busy': state.phase === 'busy' || state.phase === 'loading' ? 'true' : 'false',
       'data-unsupported': state.phase === 'unsupported' ? 'true' : 'false',
     },
-    h(PinIcon),
+    h(PinIcon, { active }),
   );
 }
 
