@@ -5,8 +5,8 @@
 Pin the **DeepSeek Harness** desktop window above every other app, straight from the composer.
 
 A pin button sits between the source-control and backlog triggers. It is grey while the window is
-normal. Click it and the icon turns white on a blue pill; the Harness window now floats above other
-windows. Click again to release it.
+normal. Click it and the icon turns white; the Harness window now floats above other windows. Click
+again to release it.
 
 | Off | On |
 | --- | --- |

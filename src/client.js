@@ -68,13 +68,10 @@ const STYLES = `
   outline-offset: 1px;
 }
 .dshat-trigger[data-active='true'] {
-  color: #ffffff;
-  background: var(--dsw-alias-state-business-primary, #4d6bfe);
+  color: var(--dsw-alias-label-primary, #ffffff);
 }
 .dshat-trigger[data-active='true']:hover {
-  color: #ffffff;
-  background: var(--dsw-alias-state-business-primary, #4d6bfe);
-  filter: brightness(1.08);
+  color: var(--dsw-alias-label-primary, #ffffff);
 }
 .dshat-trigger[data-busy='true'] {
   opacity: 0.55;

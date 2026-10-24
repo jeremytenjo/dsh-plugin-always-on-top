@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-always-on-top",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "type": "module",
   "description": "Pin the DeepSeek Harness desktop window above every other app from a button beside source control.",
